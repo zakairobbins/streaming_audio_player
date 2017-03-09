@@ -1,0 +1,103 @@
+body {
+  font-family: 'Share Tech Mono', courier;
+  font-size: 150%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 5em;
+  margin-right: 5em;
+  background-color: #171717;
+  color: white;
+}
+
+.title {
+  text-align: center;
+}
+.welcome {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+header {
+  background: url('rainbow_waveform_banner.png') white;
+  background-size: contain;
+  border-radius: 22px;
+  box-shadow:
+    3px 0px 3px 1px #AAAAFF,
+    -3px 0px 3px 1px #AAAAFF,
+  ;
+}
+
+form {
+  margin: 10px;
+  padding: 10px;
+  color: #90AAFF;
+  display: inline-block;
+  border-radius:2px
+}
+input[type=text] {
+  background-color: #303030;
+  border: 0px;
+}
+input[type=password] {
+  background-color: #303030;
+  border: 0px;
+}
+input[type=email] {
+  background-color: #303030;
+  border: 0px;
+}
+input[type=file] {
+  background-color: #303030;
+  border: 0px;
+}
+
+#entry-buttons {
+  text-align: center;
+}
+
+.button {
+  background-color: #000000;
+  color: white;
+  display: inline;
+  border-radius:30px
+}
+
+.side-bar {
+  border: 1px solid #0510DD;
+}
+
+.user-nav {
+  display: inline-block;
+}
+
+
+
+.lib-link {
+  color: #90AAFF;
+  display: inline-block;
+  text-align: right;
+  text-decoration: none;
+}
+
+.edit-menue {
+  float: center;
+  border: 1px solid #0510DD;
+}
+.shadow {
+  box-shadow:
+    3px 0px 3px 1px #AAAAFF,
+    -3px 0px 3px 1px #AAAAFF,
+  ;
+}
+table {
+  width: 100%;
+}
+td, th {
+  height: 20px;
+  text-align: left;
+}
+
+div add-tracks {
+
+}

@@ -1,0 +1,22 @@
+<header>
+<h1 class="title">ghost_rave</h1>
+<% if session[:user_id].nil?%>
+  <div id="entry-buttons">
+  <form action='/users/new' method='get'>
+  <input class='button' type='submit' value='sign_up'/>
+  </form>
+  <form action='/users/login' method='get'>
+  <input class='button' type='submit' value='log_in'/>
+  </form>
+  </div>
+<%else%>
+  <div id="entry-buttons">
+  <form action='/' method='get'>
+  <input class='button' type='submit' value='home'/>
+  </form>
+  <form action='/users/logout' method='get'>
+  <input class='button' type='submit' value='log_out'/>
+  </form>
+  </div>
+<%end%>
+</header>

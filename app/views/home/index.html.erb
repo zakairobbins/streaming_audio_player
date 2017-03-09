@@ -1,1 +1,47 @@
-<h1>Ghostrave</h1>
+<% if session[:user_id].nil? %>
+  <h3 class="welcome">welcome</h3>
+<% else %>
+  <h3 class="welcome">welcome_<%=@user.user_name%></h3>
+
+  <!-- add stuff: buttons and forms -->
+  <div class="container user-nav">
+    <div class="row">
+      <div class="col-xs-12">
+        <form class='crud-button' id='add-track-btn' action='/my/tracks/new' method='get'>
+          <input class='button' type='submit' value='add_tracks'/>
+        </form>
+        <form class='crud-button' id='add-playlist-btn' action='/my/playlists/new' method='get'>
+        <input class='button' type='submit' value='new_playlist'/>
+        </form>
+      </div>
+    </div>
+    <div clas="row">
+      <div id="add-form" class="col-xs-6">
+                                       <!-- ajax adds track form -->
+      </div>
+    </div>
+  </div>
+
+  <!-- track and playlist tables -->
+  <div class="container">
+  <div class="row">
+    <div class="col-xs-8">
+      <h5>library...</h5>
+      <a class='lib-link' href='/my/tracks'>edit_tracks</a>
+      <%= erb :'tracks/_track_table', locals: {:tracks => @tracks} %>
+    </div>
+      <br>
+      <div class="col-xs-4">
+      <%= erb :'tracks/_jPlayer' %>
+      </div>
+  </div>
+    <h5>playlists...</h5>
+      <table class=" table-bordered side-bar">
+        <% @playlists.each do |track| %>
+          <%= track.name %>
+        <% end %>
+      </table>
+</div>
+
+
+<% end %>
